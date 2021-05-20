@@ -11,6 +11,15 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".ui.main.Check">
 
+    <TextView
+        android:id="@+id/arrow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="&lt;"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toBottomOf="@+id/date"
+        app:layout_constraintEnd_toStartOf="@+id/date" />
 
     <TextView
         android:id="@+id/date"
@@ -21,12 +30,21 @@
         android:layout_marginEnd="32dp"
         android:paddingLeft="16dp"
         android:text="현재닐짜"
-
-        android:textSize="10pt"
+        android:textSize="9pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/arrow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="&gt;"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toBottomOf="@+id/date"
+        app:layout_constraintStart_toEndOf="@+id/date" />
 
     <View
         android:layout_width="wrap_content"
@@ -97,8 +115,8 @@
 
     <TextView
         android:id="@+id/time"
-        android:layout_width="97dp"
-        android:layout_height="29dp"
+        android:layout_width="127dp"
+        android:layout_height="19dp"
         android:layout_marginTop="76dp"
         android:background="@drawable/round_background"
         android:text="HH : MM : SS"
@@ -107,11 +125,19 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date" />
 
+    <TextView
+        android:id="@+id/fieldturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="운동장 바퀴수"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
     <EditText
         android:id="@+id/reason"
         android:layout_width="326dp"
         android:layout_height="39dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="38dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/item_border"
         android:ems="30"
@@ -149,15 +175,16 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="373dp"
-        android:layout_height="400dp"
+        android:layout_width="371dp"
+        android:layout_height="370dp"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checknotice">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -172,9 +199,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
                 android:text="출결 현황"
-                android:textSize="19dp"
-                android:layout_marginBottom="10dp"/>
+                android:textSize="19dp" />
 
             <TextView
                 android:id="@+id/date1"
@@ -218,13 +245,6 @@
                     android:layout_height="wrap_content"
                     android:text="10: 34" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
                 <TextView
                     android:id="@+id/stu1"
                     android:layout_width="wrap_content"
@@ -256,7 +276,6 @@
                     android:text="김진호님 출석하셨습니다." />
 
             </LinearLayout>
-
 
         </LinearLayout>
     </ScrollView>
